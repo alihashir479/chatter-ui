@@ -15,15 +15,11 @@ import { useLogout } from '../../hooks/useLogout';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const navigate = useNavigate()
   const { logout } = useLogout()
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -70,7 +66,6 @@ const Header = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
               color="inherit"
             >
               <MenuIcon />

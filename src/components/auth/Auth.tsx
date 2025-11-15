@@ -5,7 +5,7 @@ interface AuthProps {
   submitBtnLabel: string,
   onSubmit: ({ email, password }: { email: string, password: string}) => Promise<void>,
   children: React.ReactNode,
-  extraFields: React.ReactNode[],
+  extraFields?: React.ReactNode[],
   errors: string
 }
 
